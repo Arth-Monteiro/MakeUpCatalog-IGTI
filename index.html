@@ -20,27 +20,27 @@
         <div class="form-control">
           <label for="filter-brand">Marca:</label>
           <select id="filter-brand">
-            <option value="">Todos</option>
+            <option value="todos">Todos</option>
           </select>
         </div>
         <div class="form-control">
           <label for="filter-type">Tipo:</label>
           <select id="filter-type">
-            <option value="">Todos</option>
+            <option value="todos">Todos</option>
           </select>
         </div>
         <div class="form-control">
           <label for="sort"></label>
-          <select id="sort-type">
-            <option>Melhor Avaliados</option>
-            <option>Menores Preços</option>
-            <option>Maiores Preços</option>
-            <option>A-Z</option>
-            <option>Z-A</option>
+          <select id="sort-type" onchange="changeFilter()">
+            <option value="desc_rating">Melhor Avaliados</option>
+            <option value="asc_price">Menores Preços</option>
+            <option value="desc_price">Maiores Preços</option>
+            <option value="asc_name">A-Z</option>
+            <option value="desc_name">Z-A</option>
           </select>
         </div>
       </form>
-      <section class="catalog"></section>
+      <section class="catalog" id="catalog"></section>
     </main>
     <script src="js/app.js"></script>
   </body>
